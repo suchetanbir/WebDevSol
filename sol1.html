@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title></title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <style>
+            #div1 {
+                width: 200px;
+                height: 100px;
+                background-color: blue;
+            }
+            #text2 {
+                display: none;
+                font-size: 40px;
+                text-align: right;
+
+            }
+            #text1 {
+                color: white;
+                font-size: 40px;
+            }
+            
+        </style>
+
+        <script>
+            $(document).ready(function(){
+                $("#div1").click(function(){
+                    $("#text1").hide();
+                    $("#text2").show();
+                    $("#div1").remove();
+                });
+                
+            });
+        </script>
+    </head>
+    <body>
+
+
+        <div id="div1">
+            <p id="text1">
+                hello
+            </p>
+        </div>
+
+        <p id="text2" >
+            hello
+        </p>
+
+
+    </body>
+</html>

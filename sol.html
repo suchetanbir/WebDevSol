@@ -1,0 +1,51 @@
+<html>
+  <haed>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <style>
+      body {
+        background-color: darkkhaki;
+      }
+      #tb {
+        background-color: beige;
+        border-radius: 10%;
+      }
+     
+    </style>
+  </haed>
+  <body>
+
+    
+
+    <textarea id="area" rows="5px" cols="7px" onclick="erase()"></textarea>
+    <table id="tb" border="2"></table>
+
+   
+    <button id="btn">
+      Click me
+    </button><br>
+
+
+    <script>
+      $(document).ready(function(){
+        $("#btn").click(function(){
+          let val1 = $("#area").val();
+           $("#tb").append("<td>" + val1 + "</td>");        
+        });  
+        $("#btn").click(function(){
+           $("#tb").append("<td>" + prompt("enter") + "</td>");
+           $("#tb").append("<tr> </tr>");
+        });
+        
+      });
+    </script>
+
+
+
+    <script>
+      function erase(){
+        document.getElementById("area").value = "";
+      }
+    </script>
+  </body>
+</html>

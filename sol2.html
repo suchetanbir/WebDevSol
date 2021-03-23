@@ -1,0 +1,40 @@
+<html>
+    <head>
+        
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        
+    </head>
+    <body>
+        <label>enter you rollnumber</label>
+        <input name="input1" id="in1" type="number">
+
+        <label>enter your name</label>
+        <input name="input2" id="in2" type="text">
+
+        <button type="button" id="myBtn">Show alert</button>
+        <button type="button" id="myBtn2">Show value</button>
+
+        
+        <p></p>
+
+
+
+
+        <script>
+            $(document).ready(function(){
+                $("#myBtn").click(function(){
+                    var data1 = $("#in1").val();
+                    var data2 = $("#in2").val();
+                    alert("Your RollNumber is " + data1 + " and your name is " + data2 );                    
+                });
+                $("#myBtn2").click(function(){
+                    var data1 = $("#in1").val();
+                    var data2 = $("#in2").val();
+                    $("p").text("RollNumber: " + data1 + "   name: " + data2)
+                });
+
+            });
+
+        </script>
+    </body>
+</html>
